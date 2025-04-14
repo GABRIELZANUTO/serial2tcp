@@ -14,7 +14,8 @@ class DB:
         conn = self._connect()
         cursor = conn.cursor()
         cursor.execute("""
-            CREATE TABLE IF NOT EXISTS config (
+            CREATE TABLE IF NOT EXISTS portmap (
+                id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
                 cname varchar(255) UNIQUE NOT NULL,
                 cvalue varchar(255)  NOT NULL
             )
