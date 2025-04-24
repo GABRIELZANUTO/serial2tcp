@@ -2,7 +2,7 @@ import socket
 from SerialClass import Serial
 from log import LogManager
 
-class ClienteSocket(Serial):
+class ClientSocket(Serial):
     def __init__(self, serial_port='COM3', baud_rate=9600, tcp_ip='127.0.0.1', tcp_port=5978):
         super().__init__(serial_port, baud_rate)
         self.tcp_ip = tcp_ip
